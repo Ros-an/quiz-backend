@@ -4,15 +4,15 @@ exports.quizData = {
       category: "array",
       type: "multiple",
       difficulty: "medium",
-      question: `Predict output of following program.
-      int main()
-         {
-             int i;
-             int arr[5] = {1};
-             for (i = 0; i < 5; i++)
-                 printf("%d ", arr[i]);
-             return 0;
-         }
+      question: "Predict output of following program.",
+      code:`int main()
+      {
+          int i;
+          int arr[5] = {1};
+          for (i = 0; i < 5; i++)
+              printf("%d ", arr[i]);
+          return 0;
+      }
       `,
       correct_answer: "1 0 0 0 0",
       incorrect_answers: [
@@ -84,8 +84,8 @@ exports.quizData = {
       category: "string",
       type: "multiple",
       difficulty: "easy",
-      question: `What will be the output of the program ?
-      #include<stdio.h>
+      question: "What will be the output of the program ?",
+      code: `#include<stdio.h>
       #include<string.h>
       
       int main()
@@ -105,8 +105,8 @@ exports.quizData = {
       category: "string",
       type: "multiple",
       difficulty: "medium",
-      question: `What will be the output of the program ?
-      #include<stdio.h>
+      question: "What will be the output of the program ?",
+      code:`#include<stdio.h>
       int main()
       {
           char p[] = "%d";
@@ -125,8 +125,8 @@ exports.quizData = {
       category: "string",
       type: "multiple",
       difficulty: "medium",
-      question: `What will be the output of the program ?
-      #include<stdio.h>
+      question: "What will be the output of the program ?",
+      code:`#include<stdio.h>
       #include<string.h>
       int main()
       {
@@ -144,8 +144,8 @@ exports.quizData = {
       category: "string",
       type: "multiple",
       difficulty: "medium",
-      question: `What will be the output of the program ?
-      #include<stdio.h>
+      question: "What will be the output of the program ?",
+      code:`#include<stdio.h>
       int main()
       {
           printf(5+"Good Morning");
@@ -259,8 +259,8 @@ exports.quizData = {
       category: "operator-precedence",
       type: "multiple",
       difficulty: "medium",
-      question: `What will be the output of the program?
-      #include<stdio.h>
+      question: `What will be the output of the program?`,
+      code: `#include<stdio.h>
       int main()
       {
           int i=-3, j=2, k=0, m;
@@ -279,8 +279,8 @@ exports.quizData = {
       category: "operator-precedence",
       type: "multiple",
       difficulty: "medium",
-      question: `What will be the output of the program?
-      #include<stdio.h>
+      question: `What will be the output of the program?`,
+      code: `#include<stdio.h>
       int main()
       {
           static int a[20];

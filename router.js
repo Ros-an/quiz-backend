@@ -16,29 +16,29 @@ router.get("/questions",async (req, res) => {
     })
   }
 });
+  // const questions = quizQuestion.map(question => {
+
+  //   const {incorrect_answers, correct_answer} = question;
+  //   const options = [...incorrect_answers];
+  //   const tempOption = Math.floor(Math.random() * 4);
+
+  //   if (tempOption === 3) {
+  //     options.push(correct_answer);
+  //     question.incorrect_answers = undefined;
+  //     return {...question, options}
+  //   } else {
+  //     options.push(options[tempOption]);
+  //     options[tempOption] = correct_answer;
+  //           question.incorrect_answers = undefined;
+  //     return {...question, options}
+  //   }
+  // })
 router.get("/categories/:category",async(req,res)=> {
   try{
   const quizQuestion = quizData.questions.filter(quest => quest.category === req.category);
-  const questions = quizQuestion.map(question => {
-
-    const {incorrect_answers, correct_answer} = question;
-    const options = [...incorrect_answers];
-    const tempOption = Math.floor(Math.random() * 4);
-
-    if (tempOption === 3) {
-      options.push(correct_answer);
-      question.incorrect_answers = undefined;
-      return {...question, options}
-    } else {
-      options.push(options[tempOption]);
-      options[tempOption] = correct_answer;
-            question.incorrect_answers = undefined;
-      return {...question, options}
-    }
-  })
   res.json({
     success: true,
-    questions
+    questions: quizQuestion
   })
   }catch(err){
     res.json({

@@ -8,7 +8,9 @@ const quizRouter = require("./router.js");
 app.use(express.json());
 app.use(cors());
 app.use("/api", quizRouter);
-
+app.get("/",(req,res)=>{
+  res.send("hello");
+})
 app.listen(3000, () => {
   console.log('server started');
 });
